@@ -16,6 +16,21 @@ Date: 2017-03-03 12:58:19
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
+-- Table structure for `x2_shop`
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_shop`;
+CREATE TABLE `x2_shop` (
+  `shopid` varchar(10) NOT NULL,
+  `name` varchar(48) NOT NULL DEFAULT '',
+  `areaid` varchar(10) NOT NULL DEFAULT '',
+  `tel` VARCHAR(50) NULL COMMENT '电话',
+  `address` VARCHAR(50) NULL COMMENT '地址',
+  `employee` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `rank` INT(8) UNSIGNED NOT NULL DEFAULT '255' COMMENT '排名',
+  PRIMARY KEY (`shopid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
 -- Table structure for `x2_app`
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_app`;
