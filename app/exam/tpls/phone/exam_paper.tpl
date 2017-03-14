@@ -4,7 +4,7 @@
 <div id="content">
 	<div class="pages" id="paper">
 {x2;endif}
-		<header class="container-fluid" style="background-color:#337AB7;">
+		<header class="container-fluid" style="background-color:#9856a9;">
 			<h5 class="text-center">
 				<em style="font-size:2rem;" class="pull-left glyphicon glyphicon-chevron-left" onclick="javascript:$.goPrePage();"></em>
 				{x2;$sessionvars['examsession']}
@@ -183,8 +183,8 @@
 				</form>
 			</div>
 		</div>
-		<div class="container-fluid text-center" style="background-color:#337AB7;z-index:9999;position:fixed;bottom:0px;border-top:1px solid #E9E9E9;">
-			<div style="clear:both;background-color:#337AB7;padding-top:0px;border:0px;padding:0rem;padding-bottom:0.8rem;" class="input-group-addon footer">
+		<div class="container-fluid text-center" style="background-color:#9856a9;z-index:9999;position:fixed;bottom:0px;border-top:1px solid #E9E9E9;">
+			<div style="clear:both;background-color:#9856a9;padding-top:0px;border:0px;padding:0rem;padding-bottom:0.8rem;" class="input-group-addon footer">
 				<div class="col-xs-3">
 					<div class="text-center" style="height:4.2rem;padding:0.2rem;">
 						<a href="javascript:;" onclick="javascript:$.leftMenu($('#questionbar'));$('#form1').toggle();">

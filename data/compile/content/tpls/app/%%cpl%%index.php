@@ -2,9 +2,9 @@
 <body>
 <?php $this->_compileInclude('nav'); ?>
 <div class="container-fluid">
-	<div class="row-fluid">
+ 	<div class="row-fluid">
 		<div class="main" style="height:450px;overflow:hidden;">
-			<div class="col-xs-2 box itembox" style="width:22%;height:450px;overflow:hidden;">
+			<!-- <div class="col-xs-2 box itembox" style="width:22%;height:450px;overflow:hidden;">
 				<?php $cid = 0;
  foreach($this->tpl_var['coursecats'] as $key => $cat){ 
  $cid++; ?>
@@ -22,11 +22,11 @@
 				<?php break;; ?>
 				<?php } ?>
 				<?php } ?>
-			</div>
-			<div class="col-xs-10 box split" style="padding:0px;width:78%;">
+			</div> -->
+			<div class="col-xs-10 box split" style="padding:0px;width:100%;">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
-					<ol class="carousel-indicators" style="left:90%;bottom:0px;">
+					<ol class="carousel-indicators" style="left:100%;bottom:0px;">
 						<?php $cid = 0;
  foreach($this->tpl_var['contents'][2]['data'] as $key => $content){ 
  $cid++; ?>
@@ -61,9 +61,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="container-fluid">
+	</div> 
+</div> 
+<!-- <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">
 			<h4 class="title">视频课程</h4>
@@ -94,7 +94,7 @@
 	<div class="row-fluid">
 		<div class="main"><img src="app/core/styles/img/ad.jpg"/></div>
 	</div>
-</div>
+</div> -->
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">

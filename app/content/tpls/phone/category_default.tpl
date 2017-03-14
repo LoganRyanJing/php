@@ -1,5 +1,5 @@
 		{x2;if:$cat['catid']}
-		<header class="container-fluid" style="background-color:#337AB7;">
+		<header class="container-fluid" style="background-color:#9856a9;">
 			<h5 class="text-center">
 				<em style="font-size:2rem;" class="pull-left glyphicon glyphicon-chevron-left" onclick="javascript:$.goPrePage();"></em>
 				{x2;$cat['catname']}
@@ -12,7 +12,7 @@
 		</div>
 		{x2;endtree}
 		{x2;else}
-		<header class="container-fluid" style="background-color:#337AB7;">
+		<header class="container-fluid" style="background-color:#9856a9;">
 			<h5 class="text-center">
 				<em style="font-size:2rem;" class="pull-left glyphicon glyphicon-chevron-left" onclick="javascript:$.goPrePage();"></em>
 				资讯信息

@@ -1,4 +1,4 @@
-		<header class="container-fluid" style="background-color:#337AB7;">
+		<header class="container-fluid" style="background-color:#9856a9;">
 			<h5 class="text-center">
 				<em style="font-size:2rem;" class="pull-left glyphicon glyphicon-chevron-left" onclick="javascript:$.goPrePage();"></em>
 				用户注册

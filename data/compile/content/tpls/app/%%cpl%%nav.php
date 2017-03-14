@@ -2,17 +2,17 @@
 	<div class="row-fluid">
 		<div class="main">
 			<div class="col-xs-3">
-				<h1 style="font-size:42px;color:#337AB7;"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>PHPEMS</b></h1>
+				<h1 style="font-size:42px;color:#9856a9;"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色店</b></h1>
 			</div>
 			<div class="col-xs-1">
 			</div>
 			<div class="col-xs-6" style="padding-top:22px;">
 				<div class="form-inline">
 					<div class="form-group">
-						<input type="text" style="width:380px;" class="form-control" id="keyword" placeholder="搜索课程/资料">
+						<input type="text" style="width:380px;" class="form-control" id="keyword" placeholder="搜索考试/资料">
 					</div>
 					<button type="button" class="btn btn-info" onclick="javascript:window.location='index.php?content-app-search&keyword='+$('#keyword').val();">搜资料</button>
-					<button type="button" class="btn btn-primary" onclick="javascript:window.location='index.php?course-app-search&keyword='+$('#keyword').val();">搜课程</button>
+					<button type="button" class="btn btn-primary" onclick="javascript:window.location='index.php?course-app-search&keyword='+$('#keyword').val();">搜考试</button>
 				</div>
 			</div>
 			<div class="col-xs-2" style="padding-top:22px;">
@@ -42,13 +42,13 @@
 		</div>
 	</div>
 </div>
-<div class="container-fluid navbar" style="margin-top:0px;margin-bottom:0px;padding-top:10px;background-color:#337AB7;">
+<div class="container-fluid navbar" style="margin-top:0px;margin-bottom:0px;padding-top:10px;background-color:#9856a9;">
 	<div class="row-fluid">
 		<div class="main">
 			<div class="col-xs-12">
 				<ul class="list-unstyled list-inline">
 					<li class="menu col-xs-1 active"><a href="index.php" class="icon">首页</a></li>
-					<li class="menu col-xs-1"><a href="index.php?course">课程</a></li>
+					<!-- <li class="menu col-xs-1"><a href="index.php?course">课程</a></li> -->
 					<li class="menu col-xs-1"><a href="index.php?exam">考试</a></li>
 				</ul>
 			</div>

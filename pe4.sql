@@ -197,7 +197,7 @@ CREATE TABLE `x2_basic` (
 -- ----------------------------
 -- Records of x2_basic
 -- ----------------------------
-INSERT INTO `x2_basic` VALUES ('1', '演示考场', '1', '1', 'a:1:{i:0;i:1;}', 'a:1:{i:1;a:1:{i:1;s:1:\"1\";}}', 'a:10:{s:5:\"model\";s:1:\"0\";s:14:\"changesequence\";s:1:\"0\";s:4:\"auto\";s:1:\"1\";s:12:\"autotemplate\";s:15:\"exampaper_paper\";s:4:\"self\";s:1:\"1\";s:12:\"selftemplate\";s:10:\"exam_paper\";s:8:\"opentime\";a:2:{s:5:\"start\";b:0;s:3:\"end\";b:0;}s:10:\"selectrule\";s:1:\"0\";s:10:\"examnumber\";s:1:\"0\";s:12:\"notviewscore\";s:1:\"0\";}', '', '1', 'files/attach/images/content/20161231/14831523418562.jpg', '1:10', '0', '本考场为PHPEMS系统演示考场');
+INSERT INTO `x2_basic` VALUES ('1', '演示考场', '1', '1', 'a:1:{i:0;i:1;}', 'a:1:{i:1;a:1:{i:1;s:1:\"1\";}}', 'a:10:{s:5:\"model\";s:1:\"0\";s:14:\"changesequence\";s:1:\"0\";s:4:\"auto\";s:1:\"1\";s:12:\"autotemplate\";s:15:\"exampaper_paper\";s:4:\"self\";s:1:\"1\";s:12:\"selftemplate\";s:10:\"exam_paper\";s:8:\"opentime\";a:2:{s:5:\"start\";b:0;s:3:\"end\";b:0;}s:10:\"selectrule\";s:1:\"0\";s:10:\"examnumber\";s:1:\"0\";s:12:\"notviewscore\";s:1:\"0\";}', '', '1', 'files/attach/images/content/20161231/14831523418562.jpg', '1:10', '0', '本考场为千色考试系统演示考场');
 
 -- ----------------------------
 -- Table structure for `x2_block`

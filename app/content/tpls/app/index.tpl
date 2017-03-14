@@ -2,9 +2,9 @@
 <body>
 {x2;include:nav}
 <div class="container-fluid">
-	<div class="row-fluid">
+ 	<div class="row-fluid">
 		<div class="main" style="height:450px;overflow:hidden;">
-			<div class="col-xs-2 box itembox" style="width:22%;height:450px;overflow:hidden;">
+			<!-- <div class="col-xs-2 box itembox" style="width:22%;height:450px;overflow:hidden;">
 				{x2;tree:$coursecats,cat,cid}
 				<h4 class="title">{x2;v:cat['catname']}</h4>
 				{x2;if:$topcourse[v:cat['catid']]}
@@ -18,11 +18,11 @@
 				{x2;eval:break;}
 				{x2;endif}
 				{x2;endtree}
-			</div>
-			<div class="col-xs-10 box split" style="padding:0px;width:78%;">
+			</div> -->
+			<div class="col-xs-10 box split" style="padding:0px;width:100%;">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
-					<ol class="carousel-indicators" style="left:90%;bottom:0px;">
+					<ol class="carousel-indicators" style="left:100%;bottom:0px;">
 						{x2;tree:$contents[2]['data'],content,cid}
 						<li data-target="#carousel-example-generic" data-slide-to="{x2;v:key}"{x2;if:v:cid == 1} class="active"{x2;endif}></li>
 						{x2;endtree}
@@ -53,9 +53,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="container-fluid">
+	</div> 
+</div> 
+<!-- <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">
 			<h4 class="title">视频课程</h4>
@@ -84,7 +84,7 @@
 	<div class="row-fluid">
 		<div class="main"><img src="app/core/styles/img/ad.jpg"/></div>
 	</div>
-</div>
+</div> -->
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">

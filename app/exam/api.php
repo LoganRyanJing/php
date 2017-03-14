@@ -4,7 +4,7 @@ class app
 {
 	public $G;
 	//联系密钥
-	private $sc = 'exam@phpems.net';
+	private $sc = 'exam@千色考试.net';
 
 	public function __construct(&$G)
 	{

@@ -50,7 +50,7 @@ class app
 			include './api/uc_client/client.php';
 			$args = $this->ev->get('args');
 			list($uid, $username, $password, $email) = $muser = uc_user_login($args['username'], $args['userpassword']);
-			if(!$email)$email = $username.'@phpems.net';
+			if(!$email)$email = $username.'@千色考试.net';
 			if($uid > 0)
 			{
 				$ucsynlogin = uc_user_synlogin($uid);
