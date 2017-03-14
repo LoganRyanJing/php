@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>千色考试模拟考试系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<script src="app/core/styles/js/fastclick.js"></script>
+<link rel="stylesheet" type="text/css" href="app/core/styles/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="app/core/styles/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="app/core/styles/css/mskin.css" />
+<script src="app/core/styles/js/jquery.min.js"></script>
+<script src="app/core/styles/js/swiper.jquery.js"></script>
+<script src="app/core/styles/js/jquery.json.js"></script>
+<script src="app/core/styles/js/jquery.mobile.custom.min.js"></script>
+<script src="app/core/styles/js/bootstrap.min.js"></script>
+<script src="app/core/styles/js/all.fine-uploader.min.js"></script>
+<script src="app/core/styles/js/mplugin.js"></script>
+<script src="app/exam/styles/js/mplugin.js"></script>
+</head><body>
+<div id="content">
+    <div class="pages" id="page1">
+    	<header class="container-fluid" style="background-color:#9856a9;">
+			<h5 class="text-center">
+				<em style="font-size:2rem;" class="pull-left glyphicon glyphicon-home"></em>
+				<span class="ttlo">千色考试模拟考试系统</span>
+				<a style="font-size:2rem;color:#FFFFFF;" href="index.php?user-phone" class="pull-right glyphicon glyphicon-user ajax" data-target="user" data-page="user"></a>
+			</h5>
+		</header>
+    	<div class="container-fluid" style="overflow:hidden;margin-top:1rem;margin-bottom:0.4rem;">
+			<div class="swiper-container">
+	    		<div class="swiper-wrapper">
+		    				    		<div class="swiper-slide">
+		    			<a href="index.php?content-phone-content&contentid=55" class="ajax" data-page="rollpage" data-target="rollpage">
+		    				<img src="files/attach/images/content/20170314/14894732641156.jpg">
+		    			</a>
+		    		</div>
+		    				    		<div class="swiper-slide">
+		    			<a href="index.php?content-phone-content&contentid=54" class="ajax" data-page="rollpage" data-target="rollpage">
+		    				<img src="files/attach/images/content/20170314/14894732878789.jpg">
+		    			</a>
+		    		</div>
+		    			    		</div>
+	    		<div class="swiper-pagination"></div>
+	    	</div>
+		</div>
+		<div class="container-fluid">
+			<div style="clear:both;overflow:hidden;" class="items">
+				<div class="col-xs-6" style="padding:0.2rem;">
+					<div class="text-center" style="background:#712704;height:14rem;padding:0.2rem;">
+						<a href="index.php?exam-phone-index" class="ajax" data-page="exam" data-target="exam">
+							<h5>在线考试</h5>
+							<p style="font-size:1rem;">在线练习 模拟考试</p>
+							<p>
+								<img src="app/core/styles/img/item.png" style="width:6rem;"/>
+							</p>
+						</a>
+					</div>
+				</div>
+				<!--
+				<div class="col-xs-4" style="padding:0.2rem;">
+					<div class="text-center" style="background:#04477C;height:14rem;padding:0.2rem;">
+						<a class="ajax" href="index.php?course-phone-index" data-target="course" data-page="course">
+							<h5>视频课程</h5>
+							<p style="font-size:1rem;">课程课件 在线学习</p>
+							<p>
+								<img src="app/core/styles/img/item.png" style="width:6rem;"/>
+							</p>
+						</a>
+					</div>
+				</div>
+				-->
+				<div class="col-xs-6" style="padding:0.2rem;">
+					<div class="text-center" style="background:#036803;height:14rem;padding:0.2rem;">
+						<a href="index.php?content-phone-category" data-target="contentcategory" data-page="contentcategory" class="ajax">
+							<h5>考试资讯</h5>
+							<p style="font-size:1rem;">考试资讯 相关信息</p>
+							<p>
+								<img src="app/core/styles/img/item.png" style="width:6rem;"/>
+							</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
+				<span class="pull-left" style="width:35%"><hr /></span>
+				<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;">热门考场</span>
+				<span class="pull-right" style="width:35%"><hr /></span>
+			</h4>
+			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
+								<div class="media">
+					<a class="pull-left ajax" href="index.php?exam-phone-index-setCurrentBasic&basicid=1" data-target="basic" data-page="basic" style="width:8rem;">
+						<img src="files/attach/images/content/20161231/14831523418562.jpg" style="width:8rem;" alt="演示考场">
+					</a>
+					<div class="media-body">
+						<h5 class="media-heading"><a href="index.php?exam-phone-index-setCurrentBasic&basicid=1" class="ajax" data-target="basic" data-page="basic">演示考场</a></h5>
+						<p style="font-size:1rem;">本考场为系统演示考场</p>
+					</div>
+				</div>
+							</div>
+			<!--
+			<div>
+				<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
+					<span class="pull-left" style="width:35%"><hr /></span>
+					<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;">视频课程</span>
+					<span class="pull-right" style="width:35%"><hr /></span>
+				</h4>
+			</div>
+			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
+								<div class="media">
+					<a class="pull-left ajax" href="index.php?course-phone-course&csid=1" data-target="coursecontent" data-page="coursecontent" style="width:8rem;">
+						<img src="files/attach/images/content/20161231/14831523605452.jpg" style="width:8rem;" alt="会计基础">
+					</a>
+					<div class="media-body">
+						<h5 class="media-heading"><a class="ajax" href="index.php?course-phone-course&csid=1" data-target="coursecontent" data-page="coursecontent">会计基础</a></h5>
+						<p style="font-size:1rem;">会计基础 </p>
+					</div>
+				</div>
+							</div>
+			-->
+									<div>
+				<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
+					<span class="pull-left" style="width:35%"><hr /></span>
+					<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;"><a href="">帮助信息</a></span>
+					<span class="pull-right" style="width:35%"><hr /></span>
+				</h4>
+			</div>
+			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
+								<div class="media">
+					<a class="pull-left ajax" href="index.php?content-phone-content&contentid=53" data-target="contentpage" data-page="contentpage" style="width:8rem;">
+						<img src="files/attach/images/content/20161231/14831526066272.jpg" style="width:8rem;" alt="这是一篇测试性的文章">
+					</a>
+					<div class="media-body">
+						<h5 class="media-heading"><a class="ajax" href="index.php?content-phone-content&contentid=53" data-target="contentpage" data-page="contentpage">这是一篇测试性的文章</a></h5>
+						<p style="font-size:1rem;">这是一篇测试性的文章，我设置了头图和摘要 </p>
+					</div>
+				</div>
+							</div>
+												<div>
+				<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
+					<span class="pull-left" style="width:35%"><hr /></span>
+					<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;"><a href="">考试资料</a></span>
+					<span class="pull-right" style="width:35%"><hr /></span>
+				</h4>
+			</div>
+			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
+							</div>
+																		<div>
+				<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
+					<span class="pull-left" style="width:35%"><hr /></span>
+					<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;"><a href="">考试信息</a></span>
+					<span class="pull-right" style="width:35%"><hr /></span>
+				</h4>
+			</div>
+			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
+							</div>
+								</div>
+		<script>
+			new Swiper('.swiper-container',{
+				"pagination":".swiper-pagination",
+				"loop":true,
+				"autoplay": 3000,
+			});
+		</script>
+		<footer class="container-fluid text-center" style="background-color:#9856a9;">
+	<p style="padding:1rem;">
+		千色考试模拟考试系统   <br />
+		Copyright © 千色考试.net 2015-2017
+	</p>
+</footer>    </div>
+</div>
+</body>
+</html>

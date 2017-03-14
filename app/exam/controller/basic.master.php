@@ -567,6 +567,17 @@ class action extends app
 		$this->tpl->assign('areas',$areas);
 		$this->tpl->display('basic_area');
 	}
+	private function shop()
+	{
+		$page = $this->ev->get('page');
+		$page = $page > 1?$page:1;
+
+
+		$this->tpl->assign('page',$page);
+		// $this->tpl->assign('areas',$areas);
+		$this->tpl->display('basic_shop');
+	}
+	
 
 	private function delbasic()
 	{

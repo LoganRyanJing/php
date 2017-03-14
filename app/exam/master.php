@@ -39,6 +39,7 @@ class app
 		$this->apps = $this->G->make('apps','core');
 		$this->basic = $this->G->make('basic','exam');
 		$this->area = $this->G->make('area','exam');
+		$this->shop = $this->G->make('shop','exam');
 		$this->section = $this->G->make('section','exam');
 		$this->exam = $this->G->make('exam','exam');
 		$this->favor = $this->G->make('favor','exam');

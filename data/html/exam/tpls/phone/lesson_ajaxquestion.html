@@ -1,0 +1,56 @@
+						<h4 class="title">
+				第2题
+				<span class="pull-right">
+					<a class="btn text-primary qicon" onclick="javascript:favorquestion('88');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+				</span>
+			</h4>
+			<div class="choice">
+				</a>下列姓氏中，哪些曾是古代的官名？（多选）			</div>
+									<div class="choice" style="padding-bottom:0.5rem;">
+            	<p>A:欧阳</p><p>B:司马</p><p>C:上官</p><p>D:夏侯</p><p>E:司徒</p><p>F:司空</p>            </div>
+            			<div class="selector">
+            	                                                            <label class="checkbox-inline" style="line-height:2.8rem;"><input type="checkbox" name="question[88][0]" rel="88" value="A" />A </label>
+                                                            <label class="checkbox-inline" style="line-height:2.8rem;"><input type="checkbox" name="question[88][1]" rel="88" value="B" />B </label>
+                                                            <label class="checkbox-inline" style="line-height:2.8rem;"><input type="checkbox" name="question[88][2]" rel="88" value="C" />C </label>
+                                                            <label class="checkbox-inline" style="line-height:2.8rem;"><input type="checkbox" name="question[88][3]" rel="88" value="D" />D </label>
+                                                            <label class="checkbox-inline" style="line-height:2.8rem;"><input type="checkbox" name="question[88][4]" rel="88" value="E" />E </label>
+                                                            <label class="checkbox-inline" style="line-height:2.8rem;"><input type="checkbox" name="question[88][5]" rel="88" value="F" />F </label>
+                                                                                        </div>
+						<div class="choice" style="margin-top:20px;overflow:hidden;">
+				<div class="btn-group hide answerbox pull-right">
+            		            		<a class="btn btn-primary ajax" data-page="paper" data-target="lessonpaper-questionpanel" href="index.php?exam-phone-lesson-ajax-questions&number=1" title="上一题">上一题</a>
+            							<a class="btn btn-primary ajax" data-page="paper" data-target="lessonpaper-questionpanel" href="index.php?exam-phone-lesson-ajax-questions&number=3" title="下一题">下一题</a>
+            	</div>
+            	<div class="btn-group pull-right">
+            		<a class="btn btn-primary questionbtn" href="javascript:;" onclick="javascript:$('.questionbtn').addClass('hide');$('.answerbox').removeClass('hide');" title="查看答案">查看答案</a>
+            	</div>
+        	</div>
+			<div class="answerbox hide" style="border-left:10px solid #CCCCCC;margin-top:20px;">
+				<table class="table table-hover table-bordered">
+            		<tr class="info">
+                		<td width="20%">答案</td>
+                		<td>BCD</td>
+                	</tr>
+                	<tr>
+                		<td>解析</td>
+                		<td>BCD</td>
+                	</tr>
+            	</table>
+			</div>
+			<div id="rightanswer_88" class="hide">BCD</div>
+					<script type="text/javascript">
+			$("input:radio").click(function(){
+				var _this = $(this);
+				var qid = _this.attr('rel');
+				_this.parents('.selector').parent().find('.questionbtn').addClass('hide');
+				_this.parents('.selector').parent().find('.answerbox').removeClass('hide');
+				if(_this.val() == $("#rightanswer_"+qid).html())
+				{
+					_this.parents('.selector').addClass('alert-success').addClass('alert').html('恭喜您回答正确！');
+				}
+				else
+				{
+					_this.parents('.selector').addClass('alert-danger').addClass('alert').html('回答错误，正确答案为：'+$("#rightanswer_"+qid).html()+'，您选择的答案是：'+_this.val());
+				}
+			});
+		</script>

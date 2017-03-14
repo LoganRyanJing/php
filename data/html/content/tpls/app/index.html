@@ -27,7 +27,7 @@
 	<div class="row-fluid">
 		<div class="main">
 			<div class="col-xs-3">
-				<h1 style="font-size:42px;color:#9856a9;"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色店</b></h1>
+				<h1 style="font-size:42px;color:#9856a9;"><a href="index.php"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色店</b></h1>
 			</div>
 			<div class="col-xs-1">
 			</div>
@@ -42,19 +42,8 @@
 			</div>
 			<div class="col-xs-2" style="padding-top:22px;">
 				<ul class="list-unstyled list-inline">
-										<li>
-						<div class="btn-group">
-							<button type="button" class="btn btn-info"><em class="glyphicon glyphicon-user"></em> peadmin</button>
-							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li><a href="index.php?user-center"><em class="glyphicon glyphicon-user"></em> 用户中心</a></li>
-																<li><a href="index.php?core-master"><em class="glyphicon glyphicon-dashboard"></em> 后台管理</a></li>								<li><a class="ajax" href="index.php?user-app-logout"><em class="glyphicon glyphicon-log-out"></em> 退出</a></li>
-							</ul>
-						</div>
-					</li>
+										<li><a href="javascript:;" onclick="javascript:$.loginbox.show();" class="btn btn-default"> 登 录 </a></li>
+					<li><a href="index.php?user-app-register" class="btn btn-default"> 注 册 </a></li>
 									</ul>
 			</div>
 		</div>
@@ -157,7 +146,13 @@
 				</a>
 			</div>
 			<div class="col-xs-9" style="padding-left:0px;">
-							</div>
+								<div class="col-xs-3">
+					<a href="index.php?exam-app-index-setCurrentBasic&basicid=1" class="thumbnail ajax">
+						<img src="files/attach/images/content/20161231/14831523418562.jpg" alt="" width="180">
+					</a>
+					<h5 class="text-center">演示考场</h5>
+				</div>
+											</div>
 		</div>
 	</div>
 </div>
@@ -193,7 +188,7 @@
 		<div class="main itembox">
 			<div class="col-xs-12">
 				<ul class="list-unstyled">
-					<li class="text-center"><a href="">千色考试在线模拟考试系统 著作权登记号：2013 SR 113189</a></li>
+					<li class="text-center"><a href="">千色考试在线模拟考试系统   </a></li>
 					<li class="text-center"><a href="">Copyright © 千色考试.net  2015-2017</a></li>
 				</ul>
 			</div>
