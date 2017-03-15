@@ -567,17 +567,81 @@ class action extends app
 		$this->tpl->assign('areas',$areas);
 		$this->tpl->display('basic_area');
 	}
+	
+	private function delshop()
+	{
+		$shopid = intval($this->ev->get('shopid'));
+		$this->area->delArea($areaid);
+		$message = array(
+			'statusCode' => 200,
+			"message" => "操作成功",
+			"callbackType" => "forward",
+		    "forwardUrl" => "index.php?exam-master-basic-area&page={$page}{$u}"
+		);
+		$this->G->R($message);
+	}
+
+	private function modifyshop()
+	{
+		if($this->ev->get('modifyshop'))
+		{
+			$args = $this->ev->get('args');
+			$shopid = $this->ev->get('shopid');
+			$this->shop->modifyShop($shopid,$args);
+			$message = array(
+				'statusCode' => 200,
+				"message" => "操作成功",
+				"callbackType" => "forward",
+			    "forwardUrl" => "index.php?exam-master-basic-shop&page={$page}{$u}"
+			);
+			$this->G->R($message);
+		}
+		else
+		{
+			$page = intval($this->ev->get('page'));
+			$shopid = intval($this->ev->get('shopid'));
+			$shop = $this->shop->getShopById($shopid);
+			$this->tpl->assign('page',$page);
+			$this->tpl->assign('shop',$shop);
+			$this->tpl->display('basic_modifyshop');
+		}
+	}
+
+	private function addshop()
+	{
+		if($this->ev->get('insertshop'))
+		{
+			$args = $this->ev->get('args');
+			$id = $this->shop->addShop($args);
+			if(!$id)
+			$message = array(
+				'statusCode' => 300,
+				"message" => "操作失败，区号已存在"
+			);
+			else
+			$message = array(
+				'statusCode' => 200,
+				"message" => "操作成功",
+				"callbackType" => "forward",
+			    "forwardUrl" => "index.php?exam-master-basic-shop&page={$page}{$u}"
+			);
+			$this->G->R($message);
+		}
+		else
+		{
+			$this->tpl->display('basic_addshop');
+		}
+	}
+
 	private function shop()
 	{
 		$page = $this->ev->get('page');
 		$page = $page > 1?$page:1;
-
-
+		$shops = $this->shop->getShopListByPage($page,10);
 		$this->tpl->assign('page',$page);
-		// $this->tpl->assign('areas',$areas);
+		$this->tpl->assign('shops',$shops);
 		$this->tpl->display('basic_shop');
 	}
-	
 
 	private function delbasic()
 	{
