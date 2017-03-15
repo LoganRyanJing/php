@@ -45,7 +45,7 @@
 								<td>
 									<div class="btn-group">
 			                    		<a class="btn" href="index.php?exam-master-basic&search[basicareaid]={x2;v:area['areaid']}&page={x2;$page}{x2;$u}" title="考场"><em class="glyphicon glyphicon-th-list"></em></a>
-			                    		<a class="btn" href="index.php?exam-master-basic-modifyarea&areaid={x2;v:area['areaid']}&page={x2;$page}{x2;$u}" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
+			                    		<a class="btn" href="index.php?exam-master-basic-modifyshop&shopid={x2;v:shop['shopid']}&page={x2;$page}{x2;$u}" title="修改"><em class="glyphicon glyphicon-edit"></em></a>
 										<a class="btn ajax" href="index.php?exam-master-basic-delarea&areaid={x2;v:area['areaid']}&page={x2;$page}{x2;$u}" title="删除"><em class="glyphicon glyphicon-remove"></em></a>
 			                    	</div>
 								</td>
