@@ -83,7 +83,7 @@ class shop_exam
 		$this->db->exec($sql);
 		return $this->db->lastInsertId();
 	}
-
+	
 	//删除店铺
 	//参数：店铺ID
 	//返回值：受影响的记录数
@@ -97,3 +97,4 @@ class shop_exam
 }
 
 ?>
+
