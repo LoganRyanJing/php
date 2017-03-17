@@ -2,7 +2,7 @@
 <body>
 {x2;include:nav}
 <div class="container-fluid">
-	<div class="row-fluid">
+	<!-- <div class="row-fluid">
 		<div class="main box">
 			<div class="col-xs-7" style="padding:15px;">
 				<img src="app/core/styles/img/login.jpg" />
@@ -32,7 +32,54 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</div> -->
+	<div class="h-signup-box">
+    <header>
+        <h1>注册</h1>
+    </header>
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-inline">
+                <input type="text" name="ghsdm" lay-verify="required" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-inline">
+                <input type="password" name="password" lay-verify="required" autocomplete="off" placeholder="请输入密码" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地址</label>
+            <div class="layui-input-inline">
+                <input type="text" name="address" lay-verify="required" autocomplete="off" placeholder="请输入地址" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">邮箱</label>
+            <div class="layui-input-inline">
+                <input type="email" name="email" lay-verify="required" autocomplete="off" placeholder="请输入邮箱" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">固定电话</label>
+            <div class="layui-input-inline">
+                <input type="tel" name="phone" lay-verify="required" autocomplete="off" placeholder="请输入固定电话" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">手机号</label>
+            <div class="layui-input-inline">
+                <input type="tel" name="mobilePhone" lay-verify="required" autocomplete="off" placeholder="请输入手机号" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item h-center">
+            <button class="layui-btn layui-btn-radius" lay-submit="submit" lay-filter="signup">确定</button>
+        </div>
+    </form>
+    <div class="h-right">已有账号？去<a href="signin.html">登录</a></div>
+</div>
 </div>
 {x2;include:footer}
 </body>
