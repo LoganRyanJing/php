@@ -55,7 +55,7 @@
 		</div>
 	</div> 
 </div> 
-<!-- <div class="container-fluid">
+<div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">
 			<h4 class="title">视频课程</h4>
@@ -84,7 +84,7 @@
 	<div class="row-fluid">
 		<div class="main"><img src="app/core/styles/img/ad.jpg"/></div>
 	</div>
-</div> -->
+</div>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">
@@ -118,14 +118,14 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main">
-			<div class="col-xs-4 box itembox" style="min-height:320px;">
+			<!-- <div class="col-xs-4 box itembox" style="min-height:320px;">
 				<h4 class="title"><a href="index.php?content-app-category&catid=1">{x2;$rcats[1]['catname']}</a></h4>
 				<ul class="list-unstyled">
 					{x2;tree:$contents[1]['data'],content,cid}
 					<li><a href="index.php?content-app-content&contentid={x2;v:content['contentid']}" title="{x2;v:content['contenttitle']}">{x2;v:content['contenttitle']}</a></li>
 					{x2;endtree}
 				</ul>
-			</div>
+			</div> -->
 			<div class="col-xs-4 box itembox split" style="min-height:320px;">
 				<h4 class="title"><a href="index.php?content-app-category&catid=3">{x2;$rcats[3]['catname']}</a></h4>
 				<ul class="list-unstyled">
