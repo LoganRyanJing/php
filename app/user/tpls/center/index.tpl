@@ -31,8 +31,8 @@
 								<p>注册IP：{x2;$_user['userregip']}</p>
 								<p>您现有积分：{x2;$_user['usercoin']}</p>
 								<p>&nbsp;</p>
-								<p><a class="btn btn-primary" href="index.php?user-center-payfor">充值</a></p>
-							</td>
+								<!-- <p><a class="btn btn-primary" href="index.php?user-center-payfor">充值</a></p>
+ -->							</td>
 							<td style="padding:10px;">
 								<p>用户组：{x2;$groups[$_user['usergroupid']]['groupname']}</p>
 								<p>真实姓名：{x2;$_user['usertruename']}</p>
