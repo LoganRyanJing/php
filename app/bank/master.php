@@ -42,5 +42,4 @@ class app
 		$this->tpl->assign('orderstatus',$orderstatus);
 	}
 }
-
 ?>

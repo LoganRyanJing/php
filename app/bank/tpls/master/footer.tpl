@@ -1,4 +1,4 @@
-<div class="container-fluid box" style="background-color:#9856a9;margin-bottom:0px;" id="footer">
+ <div class="container-fluid box" style="background-color:#9856a9;margin-bottom:0px;" id="footer">
 	<div class="row-fluid">
 		<div class="main itembox">
 			<div class="col-xs-12">

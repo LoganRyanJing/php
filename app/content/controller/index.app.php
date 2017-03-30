@@ -16,7 +16,7 @@ class action extends app
 		}
 		$action = $this->ev->url(3);
 		if(!method_exists($this,$action))
-		$action = "index";
+		$action = "index"; 
 		$this->$action();
 		exit;
 	}
@@ -47,12 +47,12 @@ class action extends app
 		$basic = $this->G->make('basic','exam');
 		$basics = $basic->getBestBasics();
 		$this->tpl->assign('coursecats',$coursecats);
-		$this->tpl->assign('courses',$courses);
-		$this->tpl->assign('basics',$basics);
+  		$this->tpl->assign('basics',$basics);
 		$this->tpl->assign('contents',$contents);
 		$this->tpl->display('index');
 	}
 }
+
 
 
 ?>
