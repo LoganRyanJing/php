@@ -13,7 +13,7 @@ class action extends app
 		if(!method_exists($this,$action))
 		$action = "index";
 		$this->$action();
-		exit;
+		exit; 
 	}
 
 	private function openit()
@@ -123,7 +123,7 @@ class action extends app
 			"message" => "操作失败"
 		);
 		$this->G->R($message);
-	}
+	} 
 
 	private function detail()
 	{
@@ -186,6 +186,5 @@ class action extends app
 		$this->tpl->display('basics');
 	}
 }
-
 
 ?>

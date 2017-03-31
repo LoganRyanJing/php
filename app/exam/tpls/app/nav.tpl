@@ -1,10 +1,10 @@
 <div class="container-fluid box" style="margin:0px auto;padding-top:10px;overflow:visible">
 	<div class="row-fluid">
 		<div class="main">
-			<div class="col-xs-3">
+			<div class="col-xs-3" style="width: 80%">
 				<h1 style="font-size:42px;color:#9856a9;"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色考试</b></h1>
 			</div>
-			<div class="col-xs-1">
+			<!-- <div class="col-xs-1">
 			</div>
 			<div class="col-xs-6" style="padding-top:22px;">
 				<div class="form-inline">
@@ -14,7 +14,7 @@
 					<button type="button" class="btn btn-info" onclick="javascript:window.location='index.php?content-app-search&keyword='+$('#keyword').val();">搜资料</button>
 					<button type="button" class="btn btn-primary" onclick="javascript:window.location='index.php?course-app-search&keyword='+$('#keyword').val();">搜课程</button>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-xs-2" style="padding-top:22px;">
 				<ul class="list-unstyled list-inline">
 					{x2;if:$_user['userid']}

@@ -1,19 +1,10 @@
 <div class="container-fluid box" style="margin:0px auto;padding-top:10px;overflow:visible">
 	<div class="row-fluid">
 		<div class="main">
-			<div class="col-xs-3">
-				<h1 style="font-size:42px;color:#9856a9;"><a href="index.php"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色店</b></h1>
+			<div class="col-xs-3" style="width: 80%;">
+				<h1 style="font-size:42px;color:#9856a9;"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色店</b></h1>
 			</div>
 			<div class="col-xs-1">
-			</div>
-			<div class="col-xs-6" style="padding-top:22px;">
-				<div class="form-inline">
-					<div class="form-group">
-						<input type="text" style="width:380px;" class="form-control" id="keyword" placeholder="搜索考试/资料">
-					</div>
-					<button type="button" class="btn btn-info" onclick="javascript:window.location='index.php?content-app-search&keyword='+$('#keyword').val();">搜资料</button>
-					<button type="button" class="btn btn-primary" onclick="javascript:window.location='index.php?course-app-search&keyword='+$('#keyword').val();">搜考试</button>
-				</div>
 			</div>
 			<div class="col-xs-2" style="padding-top:22px;">
 				<ul class="list-unstyled list-inline">
