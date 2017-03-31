@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>demo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="huangfy">
+    <style>
+        .block{
+            display: -webkit-flex;
+            display: flex;
+        }
+        .block-item{
+            min-width: 310px; 
+            height: 400px; 
+            max-width: 600px; 
+            margin: 0 auto;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 49.5%;
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+            margin: 0 1% 10px 0;
+        }
+        .block-item:nth-child(2){
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="block">
+    <div class="block-item">111</div>
+    <div class="block-item">222</div>
+</div>
+<div class="block">
+    <div class="block-item">333</div>
+    <div class="block-item">444</div>
+</div>
+</body>
+</html>
