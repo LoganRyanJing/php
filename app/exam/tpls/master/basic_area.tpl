@@ -27,7 +27,7 @@
 						<thead>
 							<tr class="info">
 			                    <th>地区ID</th>
-			                    <th>区号</th>
+			                    <th>地区编号</th>
 								<th>地区名称</th>
 								<th>默认</th>
 								<th>操作</th>

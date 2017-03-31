@@ -29,8 +29,8 @@
 			                    <th>店铺ID</th>
 			                    <th>大区</th>
 								<th>店铺名称</th>
+								<th>店铺编号</th>
 								<th>员工数量</th>
-								<th>默认</th>
 								<th>操作</th>
 			                </tr>
 			            </thead>
@@ -38,10 +38,11 @@
 		                    {x2;tree:$shops['data'],shop,shopid}
 							<tr>
 								<td>{x2;v:shop['shopid']}</td>
-								<td>{x2;v:shop['areacode']}</td>
+								<td>{x2;v:shop['areaid']}</td>
 								<td>{x2;v:shop['name']}</td>
+								<td>{x2;v:shop['number']}</td>
 								<td>{x2;v:shop['employee']}</td>
-								<td>{x2;if:v:area['arealevel']}<em class="glyphicon glyphicon-ok"></em>{x2;else}<em class="glyphicon glyphicon-remove"></em>{x2;endif}</td>
+								<!-- <td>{x2;if:v:area['arealevel']}<em class="glyphicon glyphicon-ok"></em>{x2;else}<em class="glyphicon glyphicon-remove"></em>{x2;endif}</td> -->
 								<td>
 									<div class="btn-group">
 			                    		<a class="btn" href="index.php?exam-master-basic&search[basicareaid]={x2;v:area['areaid']}&page={x2;$page}{x2;$u}" title="考场"><em class="glyphicon glyphicon-th-list"></em></a>

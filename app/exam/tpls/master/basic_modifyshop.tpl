@@ -27,6 +27,12 @@
 			        <form action="index.php?exam-master-basic-modifyshop" method="post" class="form-horizontal">
 						<fieldset>
 						<div class="form-group">
+							<label for="shopnumber" class="control-label col-sm-2">店铺编号：</label>
+							<div class="col-sm-4">
+								<input class="form-control" name="args[number]" id="number" type="text" size="30" value="" needle="needle" alt="请输入店铺编号" />
+							</div>
+						</div>
+						<div class="form-group">
 							<label for="area" class="control-label col-sm-2">店铺名称：</label>
 							<div class="col-sm-4">
 								<input class="form-control" name="args[area]" id="area" type="text" value="{x2;$area['area']}" needle="needle" msg="您必须输入一个地区名称" />

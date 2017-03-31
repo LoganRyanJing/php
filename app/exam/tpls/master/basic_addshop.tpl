@@ -24,18 +24,24 @@
 						添加店铺
 						<a class="btn btn-primary pull-right" href="index.php?exam-master-basic-shop&page={x2;$page}{x2;$u}">店铺管理</a>
 					</h4>
-			        <form action="index.php?exam-master-basic-addquestype" method="post" class="form-horizontal">
+			        <form action="index.php?exam-master-basic-addshop" method="post" class="form-horizontal">
 						<fieldset>
 						<div class="form-group">
-							<label for="questype" class="control-label col-sm-2">店铺名称：</label>
+							<label for="shopnumber" class="control-label col-sm-2">店铺编号：</label>
 							<div class="col-sm-4">
-								<input class="form-control" name="args[questype]" id="questype" type="text" size="30" value="" needle="needle" alt="请输入店铺名称" />
+								<input class="form-control" name="args[number]" id="number" type="text" size="30" value="" needle="needle" alt="请输入店铺编号" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="questsort" class="control-label col-sm-2">所属大区：</label>
+							<label for="shopname" class="control-label col-sm-2">店铺名称：</label>
 							<div class="col-sm-4">
-								<select class="combox form-control" id="questsort" name="args[questsort]" onchange="javascript:if($(this).val() == '1')$('#choicebox').hide();else $('#choicebox').show();">
+								<input class="form-control" name="args[name]" id="name" type="text" size="30" value="" needle="needle" alt="请输入店铺名称" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="area" class="control-label col-sm-2">所属大区：</label>
+							<div class="col-sm-4">
+								<select class="combox form-control" id="questsort" name="args[area]" onchange="javascript:if($(this).val() == '1')$('#choicebox').hide();else $('#choicebox').show();">
 									<option value="1">深圳大区</option>
 		  							<option value="0">东莞大区</option>
 								</select>
@@ -59,7 +65,7 @@
 						  	<div class="col-sm-9">
 							  	<button class="btn btn-primary" type="submit">提交</button>
 							  	<input type="hidden" name="page" value="{x2;$page}"/>
-							  	<input type="hidden" name="insertquestype" value="1"/>
+							  	<input type="hidden" name="insershop" value="1"/>
 							  	{x2;tree:$search,arg,aid}
 								<input type="hidden" name="search[{x2;v:key}]" value="{x2;v:arg}"/>
 								{x2;endtree}
