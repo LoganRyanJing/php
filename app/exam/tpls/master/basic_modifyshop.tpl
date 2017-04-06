@@ -29,27 +29,32 @@
 						<div class="form-group">
 							<label for="shopnumber" class="control-label col-sm-2">店铺编号：</label>
 							<div class="col-sm-4">
-								<input class="form-control" name="args[number]" id="number" type="text" size="30" value="" needle="needle" alt="请输入店铺编号" />
+								<input class="form-control" name="args[number]" id="number" type="text" size="30" value="{x2;$shop['number']}" needle="needle" alt="请输入店铺编号" />
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="area" class="control-label col-sm-2">店铺名称：</label>
 							<div class="col-sm-4">
-								<input class="form-control" name="args[area]" id="area" type="text" value="{x2;$area['area']}" needle="needle" msg="您必须输入一个地区名称" />
+								<input class="form-control" name="args[name]" id="name" type="text" value="{x2;$shop['name']}" needle="needle" msg="您必须输入一个地区名称" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="areacode" class="control-label col-sm-2">所属大区：</label>
+							<label for="basicareaid" class="control-label col-sm-2">所属大区：</label>
 							<div class="col-sm-4">
-								<input class="form-control" name="args[areacode]" id="areacode" type="text" value="{x2;$area['areacode']}" needle="needle" msg="您必须输入地区邮编，且不能与原有地区重复" />
+								<select class="form-control" id="areaid" name="args[areaid]" needle="needle" msg="您必须选择店铺所在地区">
+				        		<option value="">请选择所在地区</option>
+						  		{x2;tree:$areas,area,aid}
+						  		<option value="{x2;v:area['areaid']}"{x2;if:v:area['areaid'] == $shop['areaid']} selected{x2;endif}>{x2;v:area['area']}</option>
+						  		{x2;endtree}
+						  		</select>
 							</div>
 						</div>
 						<div class="form-group">
 						  	<label for="areacode" class="control-label col-sm-2"></label>
 						  	<div class="col-sm-9">
 							  	<button class="btn btn-primary" type="submit">提交</button>
-								<input type="hidden" name="modifyarea" value="1"/>
-								<input type="hidden" name="areaid" value="{x2;$area['areaid']}"/>
+								<input type="hidden" name="modifyshop" value="1"/>
+								<input type="hidden" name="shopid" value="{x2;$shop['shopid']}"/>
 								<input type="hidden" name="page" value="{x2;$page}"/>
 							</div>
 						</div>

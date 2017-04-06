@@ -179,7 +179,6 @@ class user_user
 		$r['pages'] = $pages;
 		return $r;
 	}
-
 	//user group functions
 	public function getGroupById($groupid)
 	{
@@ -219,7 +218,6 @@ class user_user
 		$sql = $this->pdosql->makeSelect($data);
 		return $this->db->fetchAll($sql,'groupid','groupright');
 	}
-
 	public function getDefaultGroupByModuleid($moduleid)
 	{
 		$data = array(false,'user_group',array(array('AND',"groupmoduledefault = 1"),array('AND',"groupmoduleid = :groupmoduleid",'groupmoduleid',$moduleid)),false,'groupid DESC',false);
@@ -270,8 +268,23 @@ class user_user
 		$sql = $this->pdosql->makeSelect($data);
 		return $this->db->fetch($sql);
 	}
+	
+	public function getAreabyID()
+	{
+		$data = array(false,'area',array(array('AND',"areaid = :areaid",'areaid',$areaid)),false,'areaid DESC',false);
+		$sql = $this->pdosql->makeSelect($data);
+		return $this->db->fetch($sql); 
+	}
+	public function getAreaidByShopid($areaid)
+	{
+		$data = array(false,'shop',array(array('AND',"areaid = :areaid",'areaid',$shopid)),false,false,false);
+		$sql = $this->pdosql->makeSelect($data);
+		return $this->db->fetchAll($sql,'id','groupright');
+	}
+
 
 	//public function getRightModuleFileds
+
 
 	/**
 	public function searchModules($args)

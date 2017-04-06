@@ -55,7 +55,7 @@
 		</div>
 	</div> 
 </div> 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">
 			<h4 class="title">视频课程</h4>
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <div class="container-fluid hide">
 	<div class="row-fluid">
 		<div class="main"><img src="app/core/styles/img/ad.jpg"/></div>

@@ -571,12 +571,12 @@ class action extends app
 	private function delshop()
 	{
 		$shopid = intval($this->ev->get('shopid'));
-		$this->area->delArea($areaid);
+		$this->shop->delShop($shopid);
 		$message = array(
 			'statusCode' => 200,
 			"message" => "操作成功",
 			"callbackType" => "forward",
-		    "forwardUrl" => "index.php?exam-master-basic-area&page={$page}{$u}"
+		    "forwardUrl" => "index.php?exam-master-basic-shop&page={$page}{$u}"
 		);
 		$this->G->R($message);
 	}
@@ -601,12 +601,13 @@ class action extends app
 			$page = intval($this->ev->get('page'));
 			$shopid = intval($this->ev->get('shopid'));
 			$shop = $this->shop->getShopById($shopid);
+			$areas = $this->area->getAreaList();
+			$this->tpl->assign('areas',$areas);
 			$this->tpl->assign('page',$page);
 			$this->tpl->assign('shop',$shop);
 			$this->tpl->display('basic_modifyshop');
 		}
 	}
-
 	private function addshop()
 	{
 		if($this->ev->get('insertshop'))
@@ -616,7 +617,7 @@ class action extends app
 			if(!$id)
 			$message = array(
 				'statusCode' => 300,
-				"message" => "操作失败，区号已存在"
+				"message" => "操作失败，编号已存在"
 			);
 			else
 			$message = array(
@@ -629,9 +630,12 @@ class action extends app
 		}
 		else
 		{
+			$areas = $this->area->getAreaList();
+			$this->tpl->assign('areas',$areas);
 			$this->tpl->display('basic_addshop');
 		}
 	}
+
 
 	private function shop()
 	{

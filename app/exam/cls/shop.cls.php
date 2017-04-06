@@ -75,21 +75,28 @@ class shop_exam
 	//返回值：店铺ID
 	public function addShop($args)
 	{
-		$data = array(false,'shop',array(array("AND","shopid = :shopid",'shopid',$args['areacode'])));
-		$sql = $this->pdosql->makeSelect($data);
-		if($this->db->fetch($sql))return false;
 		$data = array('shop',$args);
 		$sql = $this->pdosql->makeInsert($data);
 		$this->db->exec($sql);
 		return $this->db->lastInsertId();
-	}
+	} 
+	// public function addShop($args)
+	// {
+	// 	$data = array(false,'shop',array(array("AND","shopid = :shopid",'shopid',$args['areacode'])));
+	// 	$sql = $this->pdosql->makeSelect($data);
+	// 	if($this->db->fetch($sql))return false;
+	// 	$data = array('shop',$args);
+	// 	$sql = $this->pdosql->makeInsert($data);
+	// 	$this->db->exec($sql);
+	// 	return $this->db->lastInsertId();
+	// }
 	
 	//删除店铺
 	//参数：店铺ID
 	//返回值：受影响的记录数
-	public function delShop($id)
+	public function delShop($shopid)
 	{
-		$data = array('area',array(array("AND","shopid = :shopid",'shopid',$id)));
+		$data = array('shop',array(array("AND","shopid = :shopid",'shopid',$shopid)));
 		$sql = $this->pdosql->makeDelete($data);
 		$this->db->exec($sql);
 		return $this->db->affectedRows();

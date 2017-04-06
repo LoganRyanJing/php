@@ -33,7 +33,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="areacode" class="control-label col-sm-2">地区区号：</label>
+							<label for="areacode" class="control-label col-sm-2">地区编号：</label>
 							<div class="col-sm-4">
 								<input class="form-control" name="args[areacode]" id="areacode" type="text" value="" needle="needle" msg="您必须输入地区邮编，且不能与原有地区重复" />
 							</div>

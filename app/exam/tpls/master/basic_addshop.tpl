@@ -38,25 +38,30 @@
 								<input class="form-control" name="args[name]" id="name" type="text" size="30" value="" needle="needle" alt="请输入店铺名称" />
 							</div>
 						</div>
-						
 						<div class="form-group">
-							<label for="area" class="control-label col-sm-2">所属大区：</label>
+							<label for="basicareaid" class="control-label col-sm-2">所属大区：</label>
 							<div class="col-sm-4">
-								<input class="form-control" name="args[areaid]" id="areaid" type="text" size="30" value="" needle="needle" alt="请输入店铺名称" />
+								<select class="form-control" id="areaid" name="args[areaid]" needle="needle" msg="您必须选择店铺所在地区">
+				        		<option value="">请选择所在地区</option>
+						  		{x2;tree:$areas,area,aid}
+						  		<option value="{x2;v:area['areaid']}"{x2;if:v:area['areaid'] == $basic['basicareaid']} selected{x2;endif}>{x2;v:area['area']}</option>
+						  		{x2;endtree}
+						  		</select>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
-						  	<label for="questchoice" class="control-label col-sm-2"></label>
+						  	<label for="" class="control-label col-sm-2"></label>
 						  	<div class="col-sm-9">
 							  	<button class="btn btn-primary" type="submit">提交</button>
 							  	<input type="hidden" name="page" value="{x2;$page}"/>
-							  	<input type="hidden" name="insershop" value="1"/>
+							  	<input type="hidden" name="insertshop" value="1"/>
 							  	{x2;tree:$search,arg,shopid}
 								<input type="hidden" name="search[{x2;v:key}]" value="{x2;v:arg}"/>
 								{x2;endtree}
 							</div>
 						</div>
+
 						</fieldset>
 					</form>
 				</div>
