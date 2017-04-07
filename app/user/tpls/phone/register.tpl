@@ -14,12 +14,22 @@
 				<div class="form-group input-group">
 					<span class="input-group-addon" id="basic-addon1"><a class="glyphicon glyphicon-globe"></a></span>
 					<input type="hidden" value="1" name="userregister"/>
-					<input class="form-control" name="args[username]" datatype="userName" needle="needle" msg="请你输入用户名" placeholder="请选择地区">
+					<select class="form-control" id="areaid" name="args[areaid]" needle="needle" style="font-size: 1.6rem;" msg="您必须选择店铺所在地区" >
+                        <option value="">请选择所在地区</option>
+                        {x2;tree:$areas,area,aid}
+                        <option value="{x2;v:area['areaid']}"{x2;if:v:area['areaid'] == $basic['basicareaid']} selected{x2;endif}>{x2;v:area['area']}</option>
+                        {x2;endtree}    
+                    </select>					
 				</div>
 				<div class="form-group input-group">
 					<span class="input-group-addon" id="basic-addon1"><a class="glyphicon glyphicon-home"></a></span>
 					<input type="hidden" value="1" name="userregister"/>
-					<input class="form-control" name="args[username]" datatype="userName" needle="needle" msg="请你输入用户名" placeholder="请选择店铺">
+					<select class="form-control" id="areaid" name="args[areaid]" needle="needle" style="font-size: 1.6rem;" msg="您必须选择店铺所在地区" >
+                        <option  value="">请选择所在店铺</option>
+                        {x2;tree:$areas,area,aid}
+                        <option value="{x2;v:area['areaid']}"{x2;if:v:area['areaid'] == $basic['basicareaid']} selected{x2;endif}>{x2;v:area['area']}</option>
+                        {x2;endtree}    
+                    </select>		
 				</div>
 				<div class="form-group input-group">
 					<span class="input-group-addon" id="basic-addon1"><a class="glyphicon glyphicon-user"></a></span>
@@ -29,7 +39,7 @@
 				<div class="form-group input-group">
 					<span class="input-group-addon" id="basic-addon1"><a class="glyphicon glyphicon-pencil"></a></span>
 					<input type="hidden" value="1" name="userregister"/>
-					<input class="form-control" name="args[useremail]" datatype="email" needle="needle" msg="请你输入工号" placeholder="请输入工号">
+					<input class="form-control" name="args[useremail]" datatype="email" needle="needle" msg="请你输入工号" placeholder="请输入工号，没有可暂时不填写">
 				</div>
 				<div class="form-group input-group">
 					<span class="input-group-addon" id="basic-addon1"><a class="glyphicon glyphicon-lock"></a></span>
