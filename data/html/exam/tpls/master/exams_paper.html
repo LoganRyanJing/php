@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>千色店在线考试系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/datetimepicker.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="app/core/styles/css/peskin.css" />
+	<!--[if lt IE 9]>
+	<script src="app/core/styles/js/html5shiv.min.js"></script>
+	<script src="app/core/styles/js/respond.min.js"></script>
+	<![endif]-->
+	<script src="app/core/styles/js/jquery.min.js"></script>
+	<script src="app/core/styles/js/jquery.json.js"></script>
+	<script src="app/core/styles/js/jquery-ui.min.js"></script>
+	<script src="app/core/styles/js/bootstrap.min.js"></script>
+	<script src="app/core/styles/js/bootstrap-datetimepicker.js"></script>
+
+	<script src="app/core/styles/js/all.fine-uploader.min.js"></script>
+
+	<script src="app/core/styles/js/ckeditor/ckeditor.js"></script>
+	<script src="app/core/styles/js/plugin.js"></script>
+	<script src="app/exam/styles/js/plugin.js"></script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="container-fluid box" style="margin:0px auto;padding-top:10px;overflow:visible">	<div class="row-fluid">		<div class="main">			<div class="col-xs-10">				<h2 style="color:#9856a9;"><a href="index.php"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;千色考试管理平台</a></h2>			</div>			<div class="col-xs-2" style="padding-top:22px;">				<ul class="list-unstyled list-inline">										<li>						<div class="btn-group">							<button type="button" class="btn btn-info"><em class="glyphicon glyphglyphicon glyphicon-user"></em> peadmin</button>							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">								<span class="caret"></span>								<span class="sr-only">Toggle Dropdown</span>							</button>							<ul class="dropdown-menu">								<li><a href="index.php?user-center"><em class="glyphicon glyphglyphicon glyphicon-user"></em> 用户中心</a></li>																<li><a href="index.php?core-master"><em class="glyphicon glyphglyphicon glyphicon-dashboard"></em> 后台管理</a></li>								<li><a class="ajax" href="index.php?user-app-logout"><em class="glyphicon glyphglyphicon glyphicon-log-out"></em> 退出</a></li>							</ul>						</div>					</li>									</ul>			</div>		</div>	</div></div><div class="container-fluid navbar" style="margin-top:0px;margin-bottom:0px;padding-top:10px;background-color:#9856a9;">	<div class="row-fluid">		<div class="main">			<div class="col-xs-12">				<ul class="list-unstyled list-inline">					<li class="menu col-xs-1">						<a href="index.php?core-master">全局</a>					</li>															<li class="menu col-xs-1">						<a href="index.php?user-master">用户模块</a>					</li>																				<li class="menu col-xs-1 active">						<a href="index.php?exam-master">考试模块</a>					</li>																														<li class="menu col-xs-1">						<a href="index.php?document-master">文件模块</a>					</li>																				<li class="menu col-xs-1">						<a href="index.php?content-master">内容模块</a>					</li>																																		</ul>			</div>		</div>	</div></div><div class="container-fluid" id="questioncontent">
+	<div class="row-fluid">
+		<div class="main box">
+			<div class="col-xs-3" id="questionbar">
+				<dl class="clear" style="width:270px;" data-spy="affix" data-offset-top="235">
+					<dt class="float_l"><h4>&nbsp;</h4></dt>
+					<ul class="nav nav-tabs" role="tablist">
+																																										<li role="presentation" class="active"><a href="#qt_1" aria-controls="home" role="tab" data-toggle="tab">一</a></li>
+																																																<li role="presentation"><a href="#qt_2" aria-controls="home" role="tab" data-toggle="tab">二</a></li>
+																																																<li role="presentation"><a href="#qt_3" aria-controls="home" role="tab" data-toggle="tab">三</a></li>
+																																																																																																																	</ul>
+					<div class="tab-content" style="margin-top:5px;" id="questionindex">
+																																										<div role="tabpanel" class="tab-pane tableindex active" id="qt_1">
+										                			                							<a id="sign_779" href="#question_779" class="btn btn-default">1</a>
+										                							<a id="sign_875" href="#question_875" class="btn btn-default">2</a>
+										                							<a id="sign_876" href="#question_876" class="btn btn-default">3</a>
+										                							<a id="sign_877" href="#question_877" class="btn btn-default">4</a>
+										                							<a id="sign_878" href="#question_878" class="btn btn-default">5</a>
+										                							<a id="sign_879" href="#question_879" class="btn btn-default">6</a>
+										                							<a id="sign_880" href="#question_880" class="btn btn-default">7</a>
+										                							<a id="sign_881" href="#question_881" class="btn btn-default">8</a>
+										                							<a id="sign_882" href="#question_882" class="btn btn-default">9</a>
+										                							<a id="sign_883" href="#question_883" class="btn btn-default">10</a>
+																				</div>
+																																																<div role="tabpanel" class="tab-pane tableindex" id="qt_2">
+										                			                							<a id="sign_538" href="#question_538" class="btn btn-default">1</a>
+										                							<a id="sign_545" href="#question_545" class="btn btn-default">2</a>
+										                							<a id="sign_638" href="#question_638" class="btn btn-default">3</a>
+										                							<a id="sign_642" href="#question_642" class="btn btn-default">4</a>
+										                							<a id="sign_662" href="#question_662" class="btn btn-default">5</a>
+										                							<a id="sign_667" href="#question_667" class="btn btn-default">6</a>
+										                							<a id="sign_677" href="#question_677" class="btn btn-default">7</a>
+										                							<a id="sign_714" href="#question_714" class="btn btn-default">8</a>
+										                							<a id="sign_815" href="#question_815" class="btn btn-default">9</a>
+										                							<a id="sign_853" href="#question_853" class="btn btn-default">10</a>
+																				</div>
+																																																<div role="tabpanel" class="tab-pane tableindex" id="qt_3">
+										                			                							<a id="sign_268" href="#question_268" class="btn btn-default">1</a>
+										                							<a id="sign_279" href="#question_279" class="btn btn-default">2</a>
+										                							<a id="sign_344" href="#question_344" class="btn btn-default">3</a>
+										                							<a id="sign_384" href="#question_384" class="btn btn-default">4</a>
+										                							<a id="sign_427" href="#question_427" class="btn btn-default">5</a>
+										                							<a id="sign_428" href="#question_428" class="btn btn-default">6</a>
+										                							<a id="sign_429" href="#question_429" class="btn btn-default">7</a>
+										                							<a id="sign_430" href="#question_430" class="btn btn-default">8</a>
+										                							<a id="sign_631" href="#question_631" class="btn btn-default">9</a>
+										                							<a id="sign_745" href="#question_745" class="btn btn-default">10</a>
+																				</div>
+																																																																																																																	</div>
+				</dl>
+			</div>
+			<div class="col-xs-9 split pull-right" style="padding:0px;position:relative;">
+				<div class="box itembox">
+					<h2 class="text-center tt">演示试卷二</h2>
+				</div>
+																												<hr />
+				<div class="box itembox">
+					<blockquote class="questype">一、单选题</blockquote>
+				</div>
+					            	            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第1题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('779');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_779">
+							<input id="time_779" type="hidden" name="time[779]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>欧洲中世纪什么样的人不能佩带钻石					</div>
+															<div class="choice">
+	                	<p>A:皇室</p><p>B:商人</p><p>C:贵族</p><p>D:教士</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第2题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('875');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_875">
+							<input id="time_875" type="hidden" name="time[875]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>诸葛亮常自比管仲和谁？					</div>
+															<div class="choice">
+	                	<p>A:乐毅</p><p>B:张良</p><p>C:孙武</p><p>D:姜子牙</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第3题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('876');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_876">
+							<input id="time_876" type="hidden" name="time[876]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>周瑜为何要派诸葛亮去聚铁山袭击曹军？					</div>
+															<div class="choice">
+	                	<p>A:借曹操子手杀死诸葛亮</p><p>B:探明曹军的军事部署</p><p>C:试探刘备的实力</p><p>D:试探诸葛亮的才智</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第4题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('877');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_877">
+							<input id="time_877" type="hidden" name="time[877]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>谁曾因谏司马昭不可伐蜀而被杀？					</div>
+															<div class="choice">
+	                	<p>A:胡烈</p><p>B:夏侯咸</p><p>C:句安</p><p>D:邓敦</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>D</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>D</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第5题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('878');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_878">
+							<input id="time_878" type="hidden" name="time[878]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>在第二次世界大战时期，当德军封锁列宁格勒的时候，有一条被称为“生命之路”的湖，它的命名字是什么：					</div>
+															<div class="choice">
+	                	<p>A:拉多加湖</p><p>B:贝加尔湖</p><p>C:伏尔加湖</p><p>D:涅瓦湖</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第6题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('879');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_879">
+							<input id="time_879" type="hidden" name="time[879]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>最近的一次俄罗斯全国性的人口普查是在哪一年：					</div>
+															<div class="choice">
+	                	<p>A:1992</p><p>B:1996</p><p>C:1999</p><p>D:2002</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>D</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>D</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第7题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('880');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_880">
+							<input id="time_880" type="hidden" name="time[880]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>普京什么时候当选俄罗斯总统，他是第几任：					</div>
+															<div class="choice">
+	                	<p>A:2001年，第二任</p><p>B:2000年，第三任</p><p>C:2000年，第二任</p><p>D:2002年，第三任</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>C</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>C</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第8题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('881');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_881">
+							<input id="time_881" type="hidden" name="time[881]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>在俄罗斯总共进行过几次车臣战争：					</div>
+															<div class="choice">
+	                	<p>A:1</p><p>B:2</p><p>C:3</p><p>D:4</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第9题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('882');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_882">
+							<input id="time_882" type="hidden" name="time[882]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>包括我们地球在类的太阳系诞生于50亿年前，那么地球上的生命诞生于多少年前？					</div>
+															<div class="choice">
+	                	<p>A:40亿年前</p><p>B:20亿年前</p><p>C:10亿年前</p><p>D:1亿年前</p><p>E:500万年前</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第10题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('883');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_883">
+							<input id="time_883" type="hidden" name="time[883]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>人类诞生于多少年前？					</div>
+															<div class="choice">
+	                	<p>A:1亿年前</p><p>B:500万年前</p><p>C:100万年前</p><p>D:5千年前</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+																																								<hr />
+				<div class="box itembox">
+					<blockquote class="questype">二、多选题</blockquote>
+				</div>
+					            	            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第1题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('538');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_538">
+							<input id="time_538" type="hidden" name="time[538]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>山西被称为三晋的三国包括：（多选）					</div>
+															<div class="choice">
+	                	<p>A:韩</p><p>B:燕</p><p>C:赵</p><p>D:魏</p><p>E:楚</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第2题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('545');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_545">
+							<input id="time_545" type="hidden" name="time[545]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>下列是中国古代唯物主义思想家的是？（多选）					</div>
+															<div class="choice">
+	                	<p>A:范缜</p><p>B:王充</p><p>C:王克明</p><p>D:严复</p><p>E:朱熹</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>AD</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>AD</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第3题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('638');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_638">
+							<input id="time_638" type="hidden" name="time[638]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>下列哪种是古代四大神兽（多选）					</div>
+															<div class="choice">
+	                	<p>A:青龙</p><p>B:白虎</p><p>C:朱雀</p><p>D:玄武</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第4题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('642');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_642">
+							<input id="time_642" type="hidden" name="time[642]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>哪两个国家的登山运动员在同一年登上珠穆朗玛峰？（多选）					</div>
+															<div class="choice">
+	                	<p>A:美国</p><p>B:新西兰</p><p>C:尼泊尔</p><p>D:英国</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>BC</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>BC</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第5题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('662');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_662">
+							<input id="time_662" type="hidden" name="time[662]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>“汉初三杰”指谁？（多选）					</div>
+															<div class="choice">
+	                	<p>A:韩信</p><p>B:萧何</p><p>C:刘邦</p><p>D:张良</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>AD</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>AD</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第6题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('667');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_667">
+							<input id="time_667" type="hidden" name="time[667]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>古代社会通行的有偿婚包括哪些？（多选）					</div>
+															<div class="choice">
+	                	<p>A:买卖婚</p><p>B:交换婚</p><p>C:劳役婚</p><p>D:掠夺婚</p><p>E:共诺婚</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>AC</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>AC</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第7题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('677');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_677">
+							<input id="time_677" type="hidden" name="time[677]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>大禹治水时把天下分为九个州，以下哪几个州是其中的5个？（多选）					</div>
+															<div class="choice">
+	                	<p>A:冀</p><p>B:淮</p><p>C:徐</p><p>D:青</p><p>E:荆</p><p>F:豫</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第8题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('714');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_714">
+							<input id="time_714" type="hidden" name="time[714]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>＂大跃进＂运动和人民公社化运动中＂左＂倾错误的主要标志是？（多选）					</div>
+															<div class="choice">
+	                	<p>A:高指标</p><p>B:瞎指挥</p><p>C:浮夸风</p><p>D:“共产风”</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>ACD</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第9题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('815');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_815">
+							<input id="time_815" type="hidden" name="time[815]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>近代中国反帝民族解放斗争的先导是以(   )为代表(多选)					</div>
+															<div class="choice">
+	                	<p>A:林则徐</p><p>B:曾国潘</p><p>C:魏源</p><p>D:张之洞</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>AC</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>AC</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第10题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('853');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_853">
+							<input id="time_853" type="hidden" name="time[853]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>谜语在清朝时又叫作（多选）					</div>
+															<div class="choice">
+	                	<p>A:谜子</p><p>B:藏头</p><p>C:切口</p><p>D:歇后</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>AC</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>AC</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+																																								<hr />
+				<div class="box itembox">
+					<blockquote class="questype">三、判断题</blockquote>
+				</div>
+					            	            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第1题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('268');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_268">
+							<input id="time_268" type="hidden" name="time[268]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>古代丝绸中，罗、缎、绮指的是同一种丝织物吗？					</div>
+															<div class="choice">
+	                	<p>A:是</p><p>B:不是</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第2题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('279');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_279">
+							<input id="time_279" type="hidden" name="time[279]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>翼龙是恐龙么？					</div>
+															<div class="choice">
+	                	<p>A:是</p><p>B:不是</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第3题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('344');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_344">
+							<input id="time_344" type="hidden" name="time[344]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>中国最早的文字是甲骨文吗？					</div>
+															<div class="choice">
+	                	<p>A:是</p><p>B:不是</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第4题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('384');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_384">
+							<input id="time_384" type="hidden" name="time[384]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>新华书店是新中国成立后建立的吗？					</div>
+															<div class="choice">
+	                	<p>A:是</p><p>B:不是</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第5题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('427');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_427">
+							<input id="time_427" type="hidden" name="time[427]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>始作俑者原指开始用陶佣殉葬的人。					</div>
+															<div class="choice">
+	                	<p>A:对</p><p>B:错</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第6题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('428');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_428">
+							<input id="time_428" type="hidden" name="time[428]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>鲁班是鲁国人。					</div>
+															<div class="choice">
+	                	<p>A:对</p><p>B:错</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第7题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('429');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_429">
+							<input id="time_429" type="hidden" name="time[429]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>"爱琴文明"属于石器文明。					</div>
+															<div class="choice">
+	                	<p>A:对</p><p>B:错</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第8题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('430');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_430">
+							<input id="time_430" type="hidden" name="time[430]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>第一台内燃机的发明者是英国人。					</div>
+															<div class="choice">
+	                	<p>A:对</p><p>B:错</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第9题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('631');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_631">
+							<input id="time_631" type="hidden" name="time[631]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>老子是春秋晚期的思想家					</div>
+															<div class="choice">
+	                	<p>A:对</p><p>B:错</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>A</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+					            				<div class="box itembox paperexamcontent">
+					<h4 class="title">
+						第10题
+						<span class="pull-right">
+							<a class="btn btn-primary qicon" onclick="javascript:favorquestion('745');"><i class="glyphicon glyphicon-heart-empty"></i></a>
+							<a name="question_745">
+							<input id="time_745" type="hidden" name="time[745]"/>
+						</span>
+					</h4>
+					<div class="choice">
+						</a>公元1900年是闰年					</div>
+															<div class="choice">
+	                	<p>A:对</p><p>B:错</p>	                </div>
+	                	                					<div class="decidediv" style="position:relative;">
+	                	<table class="table table-hover table-bordered">
+            				<tr class="info">
+	                    		<td width="15%">正确答案：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>答案解析：</td>
+	                    		<td>B</td>
+	                    	</tr>
+	                	</table>
+	                </div>
+				</div>
+																																																																																			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid box" style="background-color:#9856a9;margin-bottom:0px;" id="footer">
+	<div class="row-fluid">
+		<div class="main itembox">
+			<div class="col-xs-12">
+				<ul class="list-unstyled">
+					<li class="text-center"><a href="">千色考试在线模拟考试系统   </a></li>
+					<li class="text-center"><a href="">Copyright © 千色考试.net  2015-2016</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div></body>
+</html>
