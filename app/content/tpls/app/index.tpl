@@ -55,6 +55,7 @@
 		</div>
 	</div> 
 </div> 
+
 <!-- <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box itembox">
@@ -123,6 +124,31 @@
 				{x2;endif}
 				{x2;endtree}
 			</div> -->
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="main box itembox">
+			<h4 class="title">改错复习</h4>
+			<div class="col-xs-3" style="width:20%">
+				<a href="index.php?exam-app-history" class="thumbnail" style="border:0px;">
+					<img src="app/core/styles/img/t5.png" alt="" width="100%">
+				</a>
+				<h5 class="text-center">考试记录</h5>
+			</div>
+			<div class="col-xs-3" style="width:20%">
+				<a href="index.php?exam-app-favor" class="thumbnail" style="border:0px;">
+					<img src="app/core/styles/img/t6.png" alt="" width="100%">
+				</a>
+				<h5 class="text-center">习题收藏</h5>
+			</div>
+			<div class="col-xs-3" style="width:20%">
+				<a href="index.php?exam-app-score" class="thumbnail" style="border:0px;">
+				<img src="app/core/styles/img/t8.png" alt="" width="100%">
+				</a>
+				<h5 class="text-center">成绩单</h5>
+			</div>
 		</div>
 	</div>
 </div>
