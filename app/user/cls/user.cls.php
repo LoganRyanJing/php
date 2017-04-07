@@ -281,7 +281,24 @@ class user_user
 		$sql = $this->pdosql->makeSelect($data);
 		return $this->db->fetchAll($sql,'id','groupright');
 	}
-
+	//获取地名列表
+	//参数：无
+	//返回值：地区列表
+	public function getAreaList()
+	{
+		$data = array(false,'area','1',false,'areaid ASC');
+		$sql = $this->pdosql->makeSelect($data);
+		return $this->db->fetchAll($sql,'areaid');
+	}
+	//获取店铺列表
+	//参数：无
+	//返回值：店铺列表
+	public function getShopList()
+	{
+		$data = array(false,'shop','1',false,'shopid ASC');
+		$sql = $this->pdosql->makeSelect($data);
+		return $this->db->fetchAll($sql,'shopid');
+	}
 
 	//public function getRightModuleFileds
 
