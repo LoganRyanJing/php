@@ -275,11 +275,11 @@ class user_user
 		$sql = $this->pdosql->makeSelect($data);
 		return $this->db->fetch($sql); 
 	}
-	public function getAreaidByShopid($areaid)
+	public function getsShopByAreaid($areaid)
 	{
-		$data = array(false,'shop',array(array('AND',"areaid = :areaid",'areaid',$shopid)),false,false,false);
+		$data = array(false,'shop',array(array('AND',"areaid = :areaid",'shopid',$areaid)),false,'areaid DESC',false);
 		$sql = $this->pdosql->makeSelect($data);
-		return $this->db->fetchAll($sql,'id','groupright');
+		return $this->db->fetchAll();
 	}
 	//获取地名列表
 	//参数：无
