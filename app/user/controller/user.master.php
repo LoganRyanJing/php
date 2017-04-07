@@ -246,6 +246,10 @@ class action extends app
 		}
 		else
 		{
+			$areas = $this->user->getAreaList();
+			$this->tpl->assign('areas',$areas);
+			$shops = $this->user->getShopList();
+			$this->tpl->assign('shops',$shops);
 			$this->tpl->display('adduser');
 		}
 	}
