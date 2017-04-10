@@ -65,7 +65,7 @@ class action extends app
 				);
 				exit(json_encode($message));
 			}
-			$id = $this->user->insertUser(array('username' => $username,'usergroupid' => $defaultgroup['groupid'],'userpassword' => md5($args['userpassword']),'useremail' => $email));
+			$id = $this->user->insertUser(array('username' => $username,'usergroupid' => $defaultgroup['groupid'],'userpassword' => md5($args['userpassword']),'useremail' => $email,'usernumber'=>$args['usernumber'],'userareaid'=>$args['userareaid'],'usershopid'=>$args['usershopid']));
 			$this->session->setSessionUser(array('sessionuserid'=>$id,'sessionpassword'=>md5($args['userpassword']),'sessionip'=>$this->ev->getClientIp(),'sessiongroupid'=>$defaultgroup['groupid'],'sessionlogintime'=>TIME,'sessionusername'=>$username));
 			$message = array(
 				'statusCode' => 200,
@@ -77,6 +77,10 @@ class action extends app
 		}
 		else
 		{
+			$areas = $this->user->getAreaList();
+			$this->tpl->assign('areas',$areas);
+			$shops = $this->user->getShopList();
+			$this->tpl->assign('shops',$shops);
 			$this->tpl->display('register');
 		}
 	}
