@@ -82,6 +82,7 @@
 						        <th>组卷类型</th>
 						        <th>组卷时间</th>
 						        <th>考试科目</th>
+						        <th>试卷状态</th>
 						        <th>操作</th>
 			                </tr>
 			            </thead>
@@ -107,6 +108,9 @@
 								</td>
 								<td>
 									<?php echo $this->tpl_var['subjects'][$exam['examsubject']]['subject']; ?>
+								</td>
+								<td>
+									<a class="btn" href="index.php?<?php echo $this->tpl_var['_app']; ?>-master-exams-modifystatus&page=<?php echo $this->tpl_var['page']; ?>&examid=<?php echo $exam['examid']; ?><?php echo $this->tpl_var['u']; ?>" title="修改状态"><em style="color:#9856a9" class="glyphicon glyphicon-saved"><?php if($exam['examstatus'] == 1){ ?>开启<?php } else { ?>关闭<?php } ?></em></a>
 								</td>
 								<td>
 									<div class="btn-group">

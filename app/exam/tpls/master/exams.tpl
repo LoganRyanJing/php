@@ -80,6 +80,7 @@
 						        <th>组卷类型</th>
 						        <th>组卷时间</th>
 						        <th>考试科目</th>
+						        <th>试卷状态</th>
 						        <th>操作</th>
 			                </tr>
 			            </thead>
@@ -103,6 +104,9 @@
 								</td>
 								<td>
 									{x2;$subjects[v:exam['examsubject']]['subject']}
+								</td>
+								<td>
+									<a class="btn" href="index.php?{x2;$_app}-master-exams-modifystatus&page={x2;$page}&examid={x2;v:exam['examid']}{x2;$u}" title="修改状态"><em style="color:#9856a9" class="glyphicon glyphicon-saved">{x2;if:v:exam['examstatus'] == 1}开启{x2;else}关闭{x2;endif}</em></a>
 								</td>
 								<td>
 									<div class="btn-group">

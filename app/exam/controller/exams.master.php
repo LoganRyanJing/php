@@ -103,9 +103,35 @@ class action extends app
 		$questype = $this->basic->getQuestypeList();
 		$this->tpl->assign('questype',$questype);
 		$this->tpl->assign("sessionvars",$args);
-		$this->tpl->display('exams_paper');
+		$this->tpl->display('exams_preview');
 	}
+	
+	//修改试卷状态
+	private function modifystatus()
+	{
+		$examid= $this->ev->get('examid');
+		if ($this->ev->get('modifystatus')) {
+			$args = $this->ev->get('args');
+			$this->exam->modifyExamSetting($examid,$args);
+			$message = array(
+				'statusCode' => 200,
+				"message" => "操作成功",
+				"callbackType" => "forward",
+			    "forwardUrl" => "index.php?exam-master-exams&examid=".$examid
+			);
+			$this->G->R($message);
 
+		}
+		else
+		{
+			$exam = $this->exam->getExamSettingById($examid);
+			$this->tpl->assign('examid',$examid);
+			$this->tpl->assign('exam',$exam);
+			$this->tpl->display('exams_modifystatus');
+		}
+		
+
+	}
 	private function modifypaper()
 	{
 		$examid = $this->ev->get('examid');
