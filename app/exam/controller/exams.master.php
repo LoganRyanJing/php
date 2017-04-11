@@ -826,15 +826,15 @@ class action extends app
 		$page = $this->ev->get('page');
 		$page = $page > 0?$page:1;
 		$args = array();
-		if($search)
-		{
-			if($search['examsubject'])$args[] = array("AND","examsubject = :examsubject",'examsubject',$search['examsubject']);
-			if($search['examtype'])$args[] = array("AND","examtype = :examtype",'examtype',$search['examtype']);
-		}
+		// if($search)
+		// {
+		// 	if($search['examsubject'])$args[] = array("AND","examsubject = :examsubject",'examsubject',$search['examsubject']);
+		// 	if($search['examtype'])$args[] = array("AND","examtype = :examtype",'examtype',$search['examtype']);
+		// }
 		if(!count($args))$args = 1;
 		$exams = $this->exam->getExamSettingList($page,10,$args);
-		$subjects = $this->basic->getSubjectList();
-		$this->tpl->assign('subjects',$subjects);
+		// $subjects = $this->basic->getSubjectList();
+		// $this->tpl->assign('subjects',$subjects);
 		$this->tpl->assign('exams',$exams);
 		$this->tpl->display('exams');
 	}

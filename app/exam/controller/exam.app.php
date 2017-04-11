@@ -655,27 +655,46 @@ class action extends app
 		}
 	}
 
+	// private function index()
+	// {
+	// 	$page = $this->ev->get('page');
+	// 	$ids = trim($this->data['currentbasic']['basicexam']['self'],', ');
+	// 	if(!$ids)$ids = '0';
+	// 	$exams = $this->exam->getExamSettingList($page,20,array(array("AND","find_in_set(examid,:examid)",'examid',$ids)));
+	// 	$number = array();
+	// 	if($ids)
+	// 	{
+	// 		$ids = explode(',',$ids);
+	// 		foreach($ids as $t)
+	// 		{
+	// 			$num = $this->favor->getExamUseNumber($this->_user['sessionuserid'],$t,$this->data['currentbasic']['basicid']);
+	// 			$number['child'][$t] = $num;
+	// 			$number['all'] = intval($number['all'])+$num;
+	// 		}
+	// 	}
+	// 	$sessionvars = $this->exam->getExamSessionByUserid($this->_user['sessionuserid'],$this->data['currentbasic']['basicid']);
+	// 	if($sessionvars && ($sessionvars['examsessionbasic'] == $this->_user['sessioncurrent']) && ($sessionvars['examsessionstatus'] < 2) && ($sessionvars['examsessiontype'] == 2))
+	// 	$this->tpl->assign('sessionvars',$sessionvars);
+	// 	$this->tpl->assign('number',$number);
+	// 	$this->tpl->assign('exams',$exams);
+	// 	$this->tpl->display('exam');
+	// }
 	private function index()
 	{
+		$search = $this->ev->get('search');
 		$page = $this->ev->get('page');
-		$ids = trim($this->data['currentbasic']['basicexam']['self'],', ');
-		if(!$ids)$ids = '0';
-		$exams = $this->exam->getExamSettingList($page,20,array(array("AND","find_in_set(examid,:examid)",'examid',$ids)));
-		$number = array();
-		if($ids)
-		{
-			$ids = explode(',',$ids);
-			foreach($ids as $t)
-			{
-				$num = $this->favor->getExamUseNumber($this->_user['sessionuserid'],$t,$this->data['currentbasic']['basicid']);
-				$number['child'][$t] = $num;
-				$number['all'] = intval($number['all'])+$num;
-			}
-		}
-		$sessionvars = $this->exam->getExamSessionByUserid($this->_user['sessionuserid'],$this->data['currentbasic']['basicid']);
-		if($sessionvars && ($sessionvars['examsessionbasic'] == $this->_user['sessioncurrent']) && ($sessionvars['examsessionstatus'] < 2) && ($sessionvars['examsessiontype'] == 2))
-		$this->tpl->assign('sessionvars',$sessionvars);
-		$this->tpl->assign('number',$number);
+		$page = $page > 0?$page:1;
+		$state='1';
+		$args = array();
+		// if($search)
+		// {
+		// 	if($search['examsubject'])$args[] = array("AND","examsubject = :examsubject",'examsubject',$search['examsubject']);
+		// 	if($search['examtype'])$args[] = array("AND","examtype = :examtype",'examtype',$search['examtype']);
+		// }
+		if(!count($args))$args = 1;
+		$exams = $this->exam->getExamSettingList($page,10,array("AND","examstatus = :examstatus",'examstatus',$state));
+		$subjects = $this->basic->getSubjectList();
+		$this->tpl->assign('subjects',$subjects);
 		$this->tpl->assign('exams',$exams);
 		$this->tpl->display('exam');
 	}
