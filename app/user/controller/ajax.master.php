@@ -25,16 +25,6 @@ class action extends app
 			echo '<option value="'.$actor['groupid'].'">'.$actor['groupname'].'</option>';
 		}
 	}
-
-	private function getShopidByAreaid()
-	{
-		$areaid = $this->ev->get('areaid');
-		$shops = $this->user->getGroupsByModuleid($moduleid);
-		foreach($actors as $actor)
-		{
-			echo '<option value="'.$shops['areid'].'">'.$shops['name'].'</option>';
-		}
-	}
 	private function index()
 	{
 		//

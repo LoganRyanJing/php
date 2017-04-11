@@ -199,7 +199,7 @@ class action extends app
 			$this->tpl->display('batadduser');
 		}
 	}
-
+	
 	private function add()
 	{
 		if($this->ev->post('insertUser'))

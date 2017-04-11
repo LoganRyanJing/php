@@ -31,26 +31,13 @@
 					<div class="text-center" style="background:#712704;height:14rem;padding:0.2rem;">
 						<a href="index.php?exam-phone-index" class="ajax" data-page="exam" data-target="exam">
 							<h5>在线考试</h5>
-							<p style="font-size:1rem;">在线练习 模拟考试</p>
+							<p style="font-size:1rem;">课后练习 正式考试</p>
 							<p>
 								<img src="app/core/styles/img/item.png" style="width:6rem;"/>
 							</p>
 						</a>
 					</div>
 				</div>
-				<!--
-				<div class="col-xs-4" style="padding:0.2rem;">
-					<div class="text-center" style="background:#04477C;height:14rem;padding:0.2rem;">
-						<a class="ajax" href="index.php?course-phone-index" data-target="course" data-page="course">
-							<h5>视频课程</h5>
-							<p style="font-size:1rem;">课程课件 在线学习</p>
-							<p>
-								<img src="app/core/styles/img/item.png" style="width:6rem;"/>
-							</p>
-						</a>
-					</div>
-				</div>
-				-->
 				<div class="col-xs-6" style="padding:0.2rem;">
 					<div class="text-center" style="background:#036803;height:14rem;padding:0.2rem;">
 						<a href="index.php?content-phone-category" data-target="contentcategory" data-page="contentcategory" class="ajax">
@@ -65,44 +52,32 @@
 			</div>
 			<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
 				<span class="pull-left" style="width:35%"><hr /></span>
-				<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;">热门考场</span>
+				<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;">考试学习</span>
 				<span class="pull-right" style="width:35%"><hr /></span>
 			</h4>
 			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
-				{x2;tree:$basics['basic'],basic,bid}
-				<div class="media">
-					<a class="pull-left ajax" href="index.php?exam-phone-index-setCurrentBasic&basicid={x2;v:basic['basicid']}" data-target="basic" data-page="basic" style="width:8rem;">
-						<img src="{x2;v:basic['basicthumb']}" style="width:8rem;" alt="{x2;v:basic['basic']}">
+				<div class="col-xs-4">
+					<a href="index.php?exam-phone-exercise" class="thumbnail ajax" style="border:0px;" data-target="exercise" data-page="exercise">
+						<img src="app/core/styles/img/t1.png" alt="" width="100%">
 					</a>
-					<div class="media-body">
-						<h5 class="media-heading"><a href="index.php?exam-phone-index-setCurrentBasic&basicid={x2;v:basic['basicid']}" class="ajax" data-target="basic" data-page="basic">{x2;v:basic['basic']}</a></h5>
-						<p style="font-size:1rem;">{x2;v:basic['basicdescribe']}</p>
-					</div>
+					<h5 class="text-center">课后练习</h5>
 				</div>
-				{x2;endtree}
-			</div>
-			<!--
-			<div>
-				<h4 style="overflow:hidden;clear:both;padding-top:0.2rem;">
-					<span class="pull-left" style="width:35%"><hr /></span>
-					<span class="col-xs-4 text-center" style="width:30%;line-height:4rem;">视频课程</span>
-					<span class="pull-right" style="width:35%"><hr /></span>
-				</h4>
-			</div>
-			<div style="clear:both;padding:1.5rem;background-color:#FFFFFF;margin-bottom:1rem;" class="col-xs-12">
-				{x2;tree:$courses['data'],course,cid}
-				<div class="media">
-					<a class="pull-left ajax" href="index.php?course-phone-course&csid={x2;v:course['csid']}" data-target="coursecontent" data-page="coursecontent" style="width:8rem;">
-						<img src="{x2;v:course['csthumb']}" style="width:8rem;" alt="{x2;v:course['cstitle']}">
+				{x2;if:!$data['currentbasic']['basicexam']['model'] || $data['currentbasic']['basicexam']['model'] == 2}
+				<div class="col-xs-4">
+					<a href="index.php?exam-phone-exam" class="thumbnail ajax" style="border:0px;" data-target="exams" data-page="exams">
+						<img src="app/core/styles/img/t3.png" alt="" width="100%">
 					</a>
-					<div class="media-body">
-						<h5 class="media-heading"><a class="ajax" href="index.php?course-phone-course&csid={x2;v:course['csid']}" data-target="coursecontent" data-page="coursecontent">{x2;v:course['cstitle']}</a></h5>
-						<p style="font-size:1rem;">{x2;substring:v:course['csdescribe'],81} </p>
-					</div>
+					<h5 class="text-center">正式考试</h5>
 				</div>
-				{x2;endtree}
+				{x2;endif}
+				<div class="col-xs-4">
+					<a href="index.php?exam-phone-score" class="thumbnail ajax" style="border:0px;" data-target="scores" data-page="scores">
+						<img src="app/core/styles/img/t8.png" alt="" width="100%">
+					</a>
+					<h5 class="text-center">成绩单</h5>
+				</div>
 			</div>
-			-->
+			
 			{x2;tree:$contents,contents,cid}
 			{x2;if:v:key != 2}
 			<div>

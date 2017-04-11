@@ -2,7 +2,7 @@
 	<div class="row-fluid">
 		<div class="main">
 			<div class="col-xs-3" style="width: 80%">
-				<h1 style="font-size:42px;color:#9856a9;"><a href="index.php"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色考试</b></h1>
+				<h1 style="font-size:42px;color:#9856a9;"><img src="app/core/styles/img/logo2.png" style="height:60px;margin-top:-10px;"/>&nbsp;<b>千色考试</b></h1>
 			</div>
 			<!-- <div class="col-xs-1">
 			</div>

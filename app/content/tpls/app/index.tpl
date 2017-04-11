@@ -90,22 +90,22 @@
 	<div class="row-fluid">
 		<div class="main box itembox">
 			<h4 class="title">学习考试</h4>
-				{x2;if:!$data['currentbasic']['basicexam']['model'] || $data['currentbasic']['basicexam']['model'] == 1}
+		<!-- 		{x2;if:!$data['currentbasic']['basicexam']['model'] || $data['currentbasic']['basicexam']['model'] == 1} -->
 				<div class="col-xs-3" style="width:20%">
-					<a href="index.php?exam-app-lesson" class="thumbnail" style="border:0px;">
-						<img src="app/core/styles/img/t1.png" alt="" width="100%">
+					<a href="index.php?exam-app-exercise" class="thumbnail" style="border:0px;">
+						<img src="app/core/styles/img/t4.png" alt="" width="100%">
 					</a>
 					<h5 class="text-center">课后练习</h5>
 				</div>
-				{x2;endif}
-				{x2;if:!$data['currentbasic']['basicexam']['model'] || $data['currentbasic']['basicexam']['model'] == 2}
+			<!-- 	{x2;endif}
+				{x2;if:!$data['currentbasic']['basicexam']['model'] || $data['currentbasic']['basicexam']['model'] == 2} -->
 				<div class="col-xs-3" style="width:20%">
 					<a href="index.php?exam-app-exam" class="thumbnail" style="border:0px;">
 						<img src="app/core/styles/img/t3.png" alt="" width="100%">
 					</a>
 					<h5 class="text-center">正式考试</h5>
 				</div>
-				{x2;endif}
+				<!-- {x2;endif} -->
 			<!-- <div class="col-xs-3" style="padding:0px;">
 				<a href="index.php?exam-app" class="">
 					<img src="app/core/styles/img/item3.jpg" alt="" width="287">

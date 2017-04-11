@@ -9,7 +9,7 @@
 					<ol class="breadcrumb">
 					  <li><a href="index.php">首页</a></li>
 					  <li><a href="index.php?exam-app">考试</a></li>
-					  <!-- <li><a href="index.php?exam-app-basics">{x2;$data['currentbasic']['basic']}</a></li> -->
+					  <li><a href="index.php?exam-app-basics">{x2;$data['currentbasic']['basic']}</a></li>
 					  <li class="active">课后练习</li>
 					</ol>
 				</div>

@@ -4,9 +4,9 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="main box">
-			<!-- <div class="col-xs-7" style="padding:15px;">
+			<div class="col-xs-7" style="padding:15px;">
 				<img src="app/core/styles/img/login.jpg" />
-			</div> -->
+			</div>
 			<div class="col-xs-4 pull-right" style="margin:30px 30px 0px auto;background-color:#FFFFFF;">
 				<form class="col-xs-12" method="post" action="index.php?user-app-login">
 					<h4 class="title" style="line-height:3em;margin-bottom:40px;">用户登录</h4>
