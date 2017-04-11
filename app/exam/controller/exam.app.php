@@ -684,15 +684,14 @@ class action extends app
 		$search = $this->ev->get('search');
 		$page = $this->ev->get('page');
 		$page = $page > 0?$page:1;
-		$state='1';
-		$args = array();
+		$args = array(array("AND","examstatus = 1"));
 		// if($search)
 		// {
 		// 	if($search['examsubject'])$args[] = array("AND","examsubject = :examsubject",'examsubject',$search['examsubject']);
 		// 	if($search['examtype'])$args[] = array("AND","examtype = :examtype",'examtype',$search['examtype']);
 		// }
 		if(!count($args))$args = 1;
-		$exams = $this->exam->getExamSettingList($page,10,array("AND","examstatus = :examstatus",'examstatus',$state));
+		$exams = $this->exam->getExamSettingList($page,10,$args);
 		$subjects = $this->basic->getSubjectList();
 		$this->tpl->assign('subjects',$subjects);
 		$this->tpl->assign('exams',$exams);
